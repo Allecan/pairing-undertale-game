@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+}
+.cabecera {
+  display: block;
+}
+.tittle {
+  margin: 40px auto;
+  width: 500px;
+  height: 118px;
+}
+.info {
+  color: white;
+  font-size: 40px;
+  height: 45px;
+  font-family: "VT323", monospace;
+}
+.btn {
+  @apply flex rounded-full px-6 justify-center;
+  @apply border-red-800 border-2;
+  font-family: "VT323", monospace;
+  color: white;
+  font-size: 30px;
+  margin: auto;
+}
+.btn:hover {
+  border: 2;
+  border-color: black;
+}
+.flip {
+  transform: rotateY(180deg);
+}
+.flipreverse {
+  transform: rotateY(0);
+}
+
+body {
+  background: url(../bg-image.jpg) no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+.gameTable {
+  margin: 40px auto;
+  padding: 4px;
+  @apply flex flex-row flex-wrap;
+  justify-content: space-around;
+}
+
+.card {
+  position: relative;
+  width: 192px;
+  height: 270px;
+  margin: 20px 80px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front-view {
+  transform: rotateY(-180deg);
+}
+.back-view {
+  transform: rotateY(180);
+}
